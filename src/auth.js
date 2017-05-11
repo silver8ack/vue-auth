@@ -76,6 +76,7 @@ module.exports = function () {
                 },
                 error: function () {
                     window.localStorage.removeItem('default-auth-token');
+                    window.location.replace("/")
                 }
             });
 
