@@ -77,7 +77,7 @@ module.exports = function () {
                 // added for 401 when refreshing
                 error: function () {
                     window.localStorage.removeItem('default-auth-token');
-                    location.reload();
+                    window.location.replace("/");
                 }
             });
 
