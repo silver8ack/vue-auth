@@ -75,7 +75,7 @@ module.exports = function () {
                     this.options.checkAuthenticated.call(_this, cb);
                 },
                 error: function () {
-                    window.localStorage.removeItem('default_auth_token');
+                    window.localStorage.removeItem('default-auth-token');
                 }
             });
 
