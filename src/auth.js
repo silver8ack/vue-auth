@@ -74,11 +74,11 @@ module.exports = function () {
                 success: function () {
                     this.options.checkAuthenticated.call(_this, cb);
                 },
-		// added for 401 when refreshing
-		error: function () {
-		    window.localStorage.removeItem('default-auth-token');
-	            location.reload();
-	        }
+                // added for 401 when refreshing
+                error: function () {
+                    window.localStorage.removeItem('default-auth-token');
+                    location.reload();
+                }
             });
 
             return;
