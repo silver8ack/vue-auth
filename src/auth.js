@@ -73,7 +73,12 @@ module.exports = function () {
             this.options.refreshPerform.call(this, {
                 success: function () {
                     this.options.checkAuthenticated.call(_this, cb);
-                }
+                },
+		// added for 401 when refreshing
+		error: function () {
+		    window.localStorage.removeItem('default-auth-token');
+	            location.reload();
+	        }
             });
 
             return;
